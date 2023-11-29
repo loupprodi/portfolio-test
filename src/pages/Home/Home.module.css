@@ -1,6 +1,6 @@
 /*css da page HOME*/
 
-.container {
+.homeContainer {
     width: 100%;
     min-height: 100vh;
 
@@ -9,17 +9,17 @@
     justify-content: space-around;
 }
 
-.container img {
+.img_home img {
     height:500px;
 }
 
-.container p {
+.homeContainer p {
     font-size: 3rem;
     font-weight: bold;
     margin-bottom: 1rem;
 }
 
-.container span {
+.homeContainer span {
     color: var(--red)
 }
 
@@ -31,12 +31,17 @@
     border: 0;
     border-radius: 8px;
     cursor:pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+
 }
 
-.btn-red{
+.btn_red{
     background-color: var(--red);
     color: var(--white);
 }
-.btn-red:hover{
+.btn_red:hover{
    background-color: var(--primary);
 }

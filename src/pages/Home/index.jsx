@@ -1,5 +1,7 @@
 import {Header} from '../../components/Header';
 import {Footer} from '../../components/Footer';
+import {Container} from '../../components/Container';
+import { Link } from 'react-router-dom';
 
 import styles from './Home.module.css'
 
@@ -9,21 +11,23 @@ export const Home = () =>{
     return(
         <>
         <Header />
-          <section className={styles.container}>
+         <Container>
+         <section className={styles.homeContainer}>
               <div className={styles.apresentacao}>
                   <p>
                     Olá, sou <br/>
                     <span>Luiz Prosdoskimi</span> <br/>
                     Dev Full Stack
                   </p>
-                  <button className="btn btn-red">
+                  <Link to="/sobre" className={`${styles.btn} ${styles.btn_red}`}>
                     Saiba mais sobre mim
-                  </button>
+                  </Link>
               </div>
               <figure>
-                <img className="img-home" src={DevImg} alt="Imagem de Home" />
+                <img className={styles.img_home} src={DevImg} alt="Imagem de Home" />
               </figure>
           </section>
+         </Container>
         <Footer />
       </>
     )
