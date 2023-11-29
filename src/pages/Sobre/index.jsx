@@ -1,16 +1,22 @@
 import styles from './Sobre.module.css'
-
 import avatarImg from './images/avatarLuiz.jpg'
+import html from './images/icon-html.svg'
+import css from './images/icon-css.svg'
+import js from './images/icon-js.svg'
+import react from './images/icon-react.svg'
+import node from './images/icon-node.svg'
+import sql from './images/icon-sql.svg'
+
 
 export const Sobre = () =>{
     return(
         <section className={styles.sobre}>
 
             <div className={styles.bio}>
-                <figure>
+                
                 <img src={avatarImg} alt="Avatar Luiz" className={styles.avatarImg} />
-                </figure>
-                <div>
+                
+                <div className={styles.textos}>
                     <h2>Sobre</h2>
                   <p>sou Luiz Prosdoskimi <br />
                      dev full stack</p>
@@ -19,11 +25,16 @@ export const Sobre = () =>{
                   <p>Especializado em criação de aplicações dinâmicas e intuitivas, com foco na experiência do usuário</p>
                 </div>
             </div>
-
-
             <div className={styles.techs}>
                 <h3>Techs</h3>
-                images
+                <div className={styles.icones}>
+                <img src={html} alt="Icone do HTML" />
+                <img src={css} alt="Icone do CSS" />
+                <img src={js} alt="Icone do JS" />
+                <img src={react} alt="Icone do React" />
+                <img src={node} alt="Icone do Node" />
+                <img src={sql} alt="Icone do Sql" />
+                </div>
             </div>
         </section>
     )
