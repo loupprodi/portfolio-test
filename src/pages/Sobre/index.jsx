@@ -6,12 +6,9 @@ import styles from './Sobre.module.css'
 export const Sobre = () =>{
     return(
         <>
-        <Header />
-        <Container>
-
+       
             <h1>Sobre</h1>
-        </Container>
-        <Footer />
+       
         </>
     )
 }

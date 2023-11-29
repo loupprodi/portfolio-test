@@ -10,8 +10,6 @@ import DevImg from '../../assets/developer-red.svg'
 export const Home = () =>{
     return(
         <>
-        <Header />
-         <Container>
          <section className={styles.homeContainer}>
               <div className={styles.apresentacao}>
                   <p>
@@ -27,8 +25,6 @@ export const Home = () =>{
                 <img className={styles.img_home} src={DevImg} alt="Imagem de Home" />
               </figure>
           </section>
-         </Container>
-        <Footer />
       </>
     )
 }

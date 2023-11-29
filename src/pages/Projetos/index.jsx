@@ -6,12 +6,10 @@ import styles from './Projetos.module.css'
 export const Projetos = () =>{
     return(
         <>
-        <Header />
-        <Container>
+     
 
         <h1>Projetos</h1>
-        </Container>
-        <Footer />
+        
         </>
     )
 }
