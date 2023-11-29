@@ -3,7 +3,7 @@ import styles from './Header.module.css'
 export const Header = () =>{
     return(
         <header className={styles.header}>
-            <span>luizProsdoskimi.dev</span>
+            <span>LuizProsdoskimi.dev</span>
             <nav>
                 <a href="">Home</a>
                 <a href="">Sobre</a>
