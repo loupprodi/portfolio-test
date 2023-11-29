@@ -1,10 +1,9 @@
-import { Header } from "./components/Header"
 import './index.css'
+import './App.css'
+import {AppRoutes} from './routes'
 
 export const App = () =>{
   return(
-    <>
-      <Header />
-    </>
+    <AppRoutes />
   )
 }
