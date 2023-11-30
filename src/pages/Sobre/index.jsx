@@ -18,8 +18,8 @@ export const Sobre = () =>{
                 
                 <div className={styles.textos}>
                     <h2>Sobre</h2>
-                  <p>sou Luiz Prosdoskimi <br />
-                     dev full stack</p>
+                  <p>sou <span>Luiz Prosdoskimi</span><br />
+                    <strong>dev full stack</strong></p>
                   <p>Trabalho com desenvolvimento Web desde 2019</p>
                   <p>Sou apaixonado por transformar ideias em realidae digital</p>
                   <p>Especializado em criação de aplicações dinâmicas e intuitivas, com foco na experiência do usuário</p>
