@@ -1,24 +1,43 @@
-import { Container } from '../../components/Container'
-import { Footer } from '../../components/Footer'
-import { Header } from '../../components/Header'
-import { Card } from '../../components/card'
-import styles from './Projetos.module.css'
+import { useEffect, useState } from "react";
+import { Card } from "../../components/card";
+import styles from "./Projetos.module.css";
 
-export const Projetos = () =>{
-    return(
+//https://api.github.com/users/loupprodi/repos
+
+export const Projetos = () => {
+
+    const [ repositories, setRepositories ] = useState([])
+
+    useEffect(() => {
+        const buscarRepositorios = async () => {
+            const response = await fetch('https://api.github.com/users/loupprodi/repos')
+            const data = await response.json()
+            setRepositories(data)
+        }
+        buscarRepositorios()
+    }, [])
+
+    return (
         <section className={styles.projetos}>
-        <h1>Projetos</h1>
-            <section>
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            </section>
+            <h2>Projetos</h2>
+            {
+                repositories.length > 0 ? (
+                    <section className={styles.listProjects}>
+                        {
+                            repositories.map((repo) => (
+                                <Card
+                                    key={repo.id}
+                                    name={repo.name}
+                                    description={repo.description}
+                                    html_url={repo.html_url}
+                                />
+                            ))
+                        }
+                    </section>
+                ) : (
+                    <p>Carregando repositórios...</p>
+                )
+            }
         </section>
     )
-}
+};

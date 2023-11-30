@@ -1,12 +1,16 @@
 import styles from './Card.module.css'
 import { FaCss3Alt, FaHtml5, FaJs, FaReact} from 'react-icons/fa'
 import { BsArrowRight} from 'react-icons/bs'
+import { Link } from 'react-router-dom'
 
-export const Card = () =>{
+
+
+// eslint-disable-next-line react/prop-types
+export const Card = ({name, description, html_url}) =>{
     return(
         <section className={styles.card}>
-            <h3>Titulo Projeto</h3>
-            <p>texto descritivo do projeto</p>
+            <h3>{name}</h3>
+            <p>{description}</p>
             <div className={styles.card_footer}>
                 <div className={styles.card_icones}>
                     <FaHtml5 />
@@ -14,9 +18,9 @@ export const Card = () =>{
                     <FaJs />
                     <FaReact />
                 </div>
-                <button className={styles.card_button}>
+                <Link to={html_url} className={styles.card_button}>
                     <BsArrowRight />
-                </button>
+                </Link>
             </div>
         </section>
     )
