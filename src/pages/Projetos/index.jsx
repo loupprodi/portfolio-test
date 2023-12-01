@@ -1,16 +1,19 @@
 import { useEffect, useState } from "react";
 import { Card } from "../../components/card";
 import styles from "./Projetos.module.css";
+// import { Pagination } from "../../components/Pagination";
 
 //https://api.github.com/users/loupprodi/repos
 
-export const Projetos = () => {
+const LIMIT = 12
 
+export const Projetos = () => {
     const [ repositories, setRepositories ] = useState([])
+    // const [ offset, setOffset] = useState(0)
 
     useEffect(() => {
         const buscarRepositorios = async () => {
-            const response = await fetch('https://api.github.com/users/loupprodi/repos')
+            const response = await fetch(`https://api.github.com/users/loupprodi/repos?page=1&per_page=${LIMIT}`)
             const data = await response.json()
             setRepositories(data)
         }
@@ -38,6 +41,9 @@ export const Projetos = () => {
                     <p>Carregando repositórios...</p>
                 )
             }
+            {/* { repositories.length ?? (
+                <Pagination limit={LIMIT} totalItens={repositories.length} offset={offset} setOffset={setOffset}/>
+            )} */}
         </section>
     )
 };
